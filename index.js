@@ -4,3 +4,7 @@ function add() {
   })
   return total              
 }
+
+Number.prototype.value = function() {
+  return this.valueOf()
+};
