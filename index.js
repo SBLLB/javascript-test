@@ -8,3 +8,9 @@ function add() {
 Number.prototype.value = function() {
   return this.valueOf()
 };
+
+Number.prototype.add = function() {
+  var newArgs = [].slice.call(arguments);
+  newArgs.push(this.valueOf());
+  return(add.apply(this, newArgs));
+};
